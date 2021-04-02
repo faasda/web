@@ -5,8 +5,8 @@ function u32_to_unicode(n){
 	return String.fromCharCode(n & 0xffff,(n>>16) & 0xffff);
 }
 var a="";
-for (var j = 0; j < 0x40000; j++) a += u32_to_unicode(0x44444444);
+for (var j = 0; j < 0x400; j++) a += u32_to_unicode(0x44444444);
 //document.getElementById("this").innerHTML=a;
-alert("c");
+//alert("c");
 var c=new String(a+a+a+a+a+aa+a+a+a+a+a);
 </script>
