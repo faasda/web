@@ -4,17 +4,12 @@
     function go(){
 	    var f=document.getElementById("frame");
 	    f.src="frame2.html";
-		f.src="frame.html";
-		f.src="frame2.html";
     }
   
     </script>
   </head>
 
   <body>
-  <iframe width="500" height="500" src="frame2.html">
-  <iframe width="500" height="500" src="frame2.html">
-  <iframe width="500" height="500" src="frame2.html">
-  <iframe width="500" height="500" src="frame2.html">
+  <iframe id="frame" width="500" height="500" onload="go()" src="frame.html">
 </body>
 </html>
