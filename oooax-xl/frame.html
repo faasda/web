@@ -23,9 +23,10 @@ for (var j = 0; j < 0x4000; j++){
 a += u32_to_unicode(0xEEEE0000+(4*j));
 }
 //document.getElementById("this").innerHTML=a;
-var b=new String(a);
+var b;
+for(var x=0;x<16;x++) b=new String(a);
 console.log(b);
-alert("d");
+alert("e");
 </script>
 </body>
 
