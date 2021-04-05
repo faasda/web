@@ -19,10 +19,12 @@ function u32_to_unicode(n){
 	return String.fromCharCode(n & 0xffff,(n>>16) & 0xffff);
 }
 var a="";
-for (var j = 0; j < 0x4000; j++) a += u32_to_unicode(0xEEEE0000+(4*j));
+for (var j = 0; j < 0x4000; j++){
+a += u32_to_unicode(0xEEEE0000+(4*j));
+}
 //document.getElementById("this").innerHTML=a;
-//alert("c");
 console.log(a);
+alert("c");
 </script>
 </body>
 
