@@ -7,7 +7,7 @@
 	for(var i=0; i<400; i++){
 		ar[i]=a;
 	}
-	    var f=document.getElementById("frame");
+	    //var f=document.getElementById("frame");
 	    f.src="frame2.html";
     }
   
@@ -15,6 +15,6 @@
   </head>
 
   <body>
-  <iframe id="frame" width="500" height="500" onload="go()" src="">
+  <iframe id="frame" width="500" height="500" onerror="go(f)" src="">
 </body>
 </html>
